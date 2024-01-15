@@ -1,0 +1,9 @@
+{% extends 'page_gloval.html' %}
+{% block content %}
+   <H1>Bienvenu sur notre site web</H1>
+         <h1>{{ un_produit.nom}}</h1>
+         <h1>{{ un_produit.prix}} </h1>
+         <img src=" {{ un_produit.image.url }} " alt="{{ un_produit.nom}} " >
+         <p>{{un_produit.description}}</p>
+         <p>{{un_produit.stock}}</p>
+{% endblock  %}

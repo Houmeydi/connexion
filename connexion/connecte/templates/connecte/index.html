@@ -1,0 +1,11 @@
+{% extends 'page_gloval.html' %}
+{% block content %}
+   {% for produit in produits %}
+         <h1>{{ produit.nom}}</h1>
+         <img src=" {{ produit.image.url }} " alt="{{ produit.nom}} " >
+         {% comment "" %}
+         <a href="{% url 'produit1' produit.slug  %}">voir l'articul</a>  
+         {% endcomment %}
+         <a href="{{ produit.get_absolute_urls}}">voir l'articul</a>
+   {% endfor %}
+{% endblock  %}
